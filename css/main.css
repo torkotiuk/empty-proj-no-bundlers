@@ -36,6 +36,16 @@ h6 {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
 }
 
 .container {
@@ -71,21 +81,8 @@ header {
   background-color: #b8bdff;
 }
 
-.hero__title {
-  text-align: center;
-}
-
-.guide__img-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.guide__pic {
-  max-height: 100%;
-  max-width: 100%;
-  margin-bottom: 10px;
+.resp-pic .thumb {
+  outline: 1px solid red;
 }
 
 footer {

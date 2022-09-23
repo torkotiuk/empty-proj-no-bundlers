@@ -12,48 +12,113 @@
       <header><div class="container">Header</div></header>
 
       <main class="main">
-        <section class="section hero">
+        <section class="section resp-pic">
           <div class="container">
-            <h1 class="hero__title">Hero title</h1>
+            <h2>Responsive images</h2>
+
+            <div class="thumb">
+              <img src="./assets/images/cat-640.jpg" alt="Cat" />
+              <p>
+                This pic is responsive till the end of the responsive container
+                480px.
+              </p>
+            </div>
           </div>
         </section>
 
-        <section class="section guide">
+        <section class="section">
           <div class="container">
-            <h2>Section title</h2>
-
-            <ol class="guide__list">
+            <h2>Guide</h2>
+            <ul>
               <li>
-                <p>
-                  If we don't have modern normalize as a link connect it as a
-                  local file.
-                </p>
+                Make in every project for tag <b>img</b>
+                <ul>
+                  <li>
+                    img { display: block; max-width: 100%; height: auto; }
+                    <p>
+                      P.S. <b>max-with</b> - use for pic-s not more than pic-s
+                      size, means if we made <b>width</b> we will get pic-s in
+                      responsive blocks bigger than real size.
+                    </p>
+                  </li>
+                </ul>
               </li>
               <li>
-                <p>
-                  If we can't use modern normalize in a project we should
-                  remember about settings of
-                  <b>*, *::before, *::before { box-sizing: border-box; }</b> and
-                  <b>img { display: block; }</b>, also different margins,
-                  paddings for body, p et.c.
-                </p>
+                Go to
+                <a target="_blank" href="https://www.mydevice.io/"
+                  >mydevice.io</a
+                >
+                for measure of your <b>CSS pixel-ratio</b> screen. For screens
+                with this value much than 1, we have to prepare bigger pic-s.
               </li>
+              <!-- Approach 1 -->
               <li>
-                <p>Press footer to bottom of the page</p>
-                <div class="guide__img-container">
-                  <img
-                    class="guide__pic"
-                    src="./assets/images/footer-bottom_1.jpg"
-                    alt=""
-                  />
-                  <img
-                    class="guide__pic"
-                    src="./assets/images/footer-bottom_2.jpg"
-                    alt=""
-                  />
+                <b
+                  >Approach 1. with fixed &lt;img width=""&gt;, usually in
+                  adaptive markup</b
+                >
+                Prepare pic-s for different screen sizes, means export from f.e.
+                Figma and markup it like
+                <p>
+                  So browser downloads pic for selected screen with CSS
+                  pixel-ratio
+                </p>
+                <ul>
+                  <li>
+                    <!--  -->
+                    &lt;img
+                    <div>
+                      <div>srcset="</div>
+                      <div style="color: rgb(35, 0, 200)">
+                        <div>./assets/images/cat-320.jpg 1x,</div>
+                        <div>./assets/images/cat-640.jpg 2x,</div>
+                        <div>./assets/images/cat-960.jpg 3x</div>
+                      </div>
+                      <div>"</div>
+                      <div>src="./assets/images/cat-320.jpg"</div>
+                      <div>alt="Cat"</div>
+                      <div style="color: rgb(35, 0, 200)">width="320"</div>
+                    </div>
+                    /&gt;
+                    <!--  -->
+                  </li>
+                </ul>
+              </li>
+              <!-- Approach 2 -->
+              <li>
+                Approach 2. Browser takes nearest for screen quality pic.
+                <!--  -->
+                &lt;img
+                <div>
+                  <div>srcset="</div>
+                  <div style="color: rgb(175, 0, 0)">
+                    <div>./assets/images/cat-320.jpg 320w,</div>
+                    <div>./assets/images/cat-640.jpg 640w,</div>
+                    <div>./assets/images/cat-960.jpg 960w</div>
+                    <div>./assets/images/cat-1280.jpg 1280w</div>
+                  </div>
+                  <div>"</div>
+                  <div>src="./assets/images/cat-320.jpg"</div>
+                  <div>alt="Cat"</div>
+                  <div>
+                    sizes="(min-width: 800px) 33vw, (min-width: 500px) 50vw,
+                    100vw"
+                  </div>
                 </div>
+                /&gt;
+                <!--  -->
+                <p>
+                  Attribute sizes="" helps us optimize of pic-s selecting, f.e.
+                  (min-width: 800px) 50vw - means from 800px we will show pic
+                  not much than 50% of view port.
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=5-dBlOTvv0A&t=1885s"
+                    >More explanation in webinar.</a
+                  >
+                </p>
               </li>
-            </ol>
+            </ul>
           </div>
         </section>
       </main>
