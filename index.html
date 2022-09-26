@@ -9,7 +9,22 @@
   </head>
   <body>
     <div class="wrapper">
-      <header><div class="container">Header</div></header>
+      <header>
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__set list">
+              <li class="nav__item">
+                <a class="nav__link current" href="./index.html">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="./responsive-code-w.html"
+                  >Responsive - Code-W</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
       <main class="main">
         <section class="section resp-pic">
@@ -58,7 +73,11 @@
                   adaptive markup</b
                 >
                 Prepare pic-s for different screen sizes, means export from f.e.
-                Figma and markup it like
+                Figma and markup it like. (<a
+                  target="_blank"
+                  href="https://www.youtube.com/watch?v=5-dBlOTvv0A&t=570s"
+                  >How to prepare bigger (for retina) pic-s with Figma.</a
+                >)
                 <p>
                   So browser downloads pic for selected screen with CSS
                   pixel-ratio
@@ -86,7 +105,8 @@
               </li>
               <!-- Approach 2 -->
               <li>
-                Approach 2. Browser takes nearest for screen quality pic.
+                <b> Approach 2.</b> Browser takes nearest for screen quality
+                pic.
                 <!--  -->
                 &lt;img
                 <div>
@@ -118,6 +138,28 @@
                   >
                 </p>
               </li>
+              <li>
+                Try use <b>lazy</b> attribute in markups
+                <ul>
+                  <li>
+                    &lt;img loading="lazy"&gt; - images don't paint when they
+                    aren't in screen
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b style="color: red"
+                  >Good practice of page downloading is 1,5 - 2 s.</b
+                >
+                <p>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/watch?v=5-dBlOTvv0A&t=3450s"
+                    >Calculate web-performance with devTools help explanation -
+                    LightHouse TAB</a
+                  >
+                </p>
+              </li>
             </ul>
           </div>
         </section>
@@ -125,5 +167,7 @@
 
       <footer><div class="container">Footer</div></footer>
     </div>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
