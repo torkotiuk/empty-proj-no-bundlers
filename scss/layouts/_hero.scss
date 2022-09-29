@@ -1,5 +1,45 @@
 .hero {
   &__title {
     text-align: center;
+    color: #fff;
   }
+
+  // --- --- MOBILE --- ---
+  @media screen and (max-width: 767px) {
+    height: 400px;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../assets/images/hero/hero-mobile.jpg),
+      linear-gradient(to right, rgb(255, 0, 0), rgb(0, 0, 255));
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../assets/images/hero/hero-mobile@2x.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 3) and (max-width: 767px),
+    screen and (min-resolution: 288dpi) and (max-width: 767px),
+    screen and (min-resolution: 3dppx) and (max-width: 767px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../assets/images/hero/hero-mobile@3x.jpg);
+  }
+  // --- --- MOBILE END --- ---
 }
