@@ -12,7 +12,7 @@ body {
   margin: 0;
   height: 100%;
   font-size: 24px;
-  color: #2c2c2c;
+  color: var(--main-font-color);
 }
 
 .wrapper {
@@ -36,4 +36,12 @@ h6 {
 
 img {
   display: block;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
