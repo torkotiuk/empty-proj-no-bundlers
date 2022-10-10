@@ -71,6 +71,20 @@ header {
   background-color: #b8bdff;
 }
 
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .github-link:hover, header .github-link:focus {
+  opacity: 0.8;
+}
+
+header .github-link svg {
+  display: block;
+}
+
 .hero__title {
   text-align: center;
 }
